@@ -1,0 +1,34 @@
+INFO 11-21 20:06:16 config.py:350] This model supports multiple tasks: {'embedding', 'generate'}. Defaulting to 'generate'.
+INFO 11-21 20:06:17 config.py:1020] Defaulting to use mp for distributed inference
+INFO 11-21 20:06:17 config.py:1136] Chunked prefill is enabled with max_num_batched_tokens=512.
+INFO 11-21 20:06:17 llm_engine.py:249] Initializing an LLM engine (v0.6.4.post1) with config: model='meta-llama/Llama-3.1-70B-Instruct', speculative_config=None, tokenizer='meta-llama/Llama-3.1-70B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=16384, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=1234, served_model_name=meta-llama/Llama-3.1-70B-Instruct, num_scheduler_steps=1, chunked_prefill_enabled=True multi_step_stream_outputs=True, enable_prefix_caching=False, use_async_output_proc=True, use_cached_outputs=False, chat_template_text_format=string, mm_processor_kwargs=None, pooler_config=None)
+WARNING 11-21 20:06:18 multiproc_gpu_executor.py:56] Reducing Torch parallelism from 192 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
+INFO 11-21 20:06:18 custom_cache_manager.py:17] Setting Triton cache manager to: vllm.triton_utils.custom_cache_manager:CustomCacheManager
+INFO 11-21 20:06:18 selector.py:135] Using Flash Attention backend.
+[1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:18 selector.py:135] Using Flash Attention backend.
+[1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:18 multiproc_worker_utils.py:215] Worker ready; awaiting tasks
+[1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:21 utils.py:961] Found nccl from library libnccl.so.2
+INFO 11-21 20:06:21 utils.py:961] Found nccl from library libnccl.so.2
+[1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:21 pynccl.py:69] vLLM is using nccl==2.21.5
+INFO 11-21 20:06:21 pynccl.py:69] vLLM is using nccl==2.21.5
+INFO 11-21 20:06:22 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_2,3.json
+[1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:22 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_2,3.json
+INFO 11-21 20:06:22 shm_broadcast.py:236] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x7f9c10242230>, local_subscribe_port=44475, remote_subscribe_port=None)
+INFO 11-21 20:06:22 model_runner.py:1072] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+[1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:22 model_runner.py:1072] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+[1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:23 weight_utils.py:243] Using model weights format ['*.safetensors']
+INFO 11-21 20:06:23 weight_utils.py:243] Using model weights format ['*.safetensors']
+[1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:49 model_runner.py:1077] Loading model weights took 65.7407 GB
+INFO 11-21 20:06:50 model_runner.py:1077] Loading model weights took 65.7407 GB
+[1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:52 worker.py:232] Memory profiling results: total_gpu_memory=94.99GiB initial_memory_usage=66.87GiB peak_torch_memory=65.84GiB memory_usage_post_profile=67.59GiB non_torch_memory=1.81GiB kv_cache_size=8.34GiB gpu_memory_utilization=0.80
+INFO 11-21 20:06:52 worker.py:232] Memory profiling results: total_gpu_memory=94.99GiB initial_memory_usage=66.87GiB peak_torch_memory=65.84GiB memory_usage_post_profile=67.84GiB non_torch_memory=2.06GiB kv_cache_size=8.08GiB gpu_memory_utilization=0.80
+INFO 11-21 20:06:52 distributed_gpu_executor.py:57] # GPU blocks: 3311, # CPU blocks: 1638
+INFO 11-21 20:06:52 distributed_gpu_executor.py:61] Maximum concurrency for 16384 tokens per request: 3.23x
+[1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:55 model_runner.py:1400] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+[1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:55 model_runner.py:1404] If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 11-21 20:06:55 model_runner.py:1400] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 11-21 20:06:55 model_runner.py:1404] If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 11-21 20:06:56 custom_all_reduce.py:224] Registering 322 cuda graph addresses
+[1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:56 custom_all_reduce.py:224] Registering 322 cuda graph addresses
+[1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:56 model_runner.py:1518] Graph capturing finished in 1 secs, took 0.06 GiB
+INFO 11-21 20:06:56 model_runner.py:1518] Graph capturing finished in 1 secs, took 0.06 GiB
