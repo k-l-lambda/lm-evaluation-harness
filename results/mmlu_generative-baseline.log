@@ -32,3 +32,71 @@ INFO 11-21 20:06:56 custom_all_reduce.py:224] Registering 322 cuda graph address
 [1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:56 custom_all_reduce.py:224] Registering 322 cuda graph addresses
 [1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 20:06:56 model_runner.py:1518] Graph capturing finished in 1 secs, took 0.06 GiB
 INFO 11-21 20:06:56 model_runner.py:1518] Graph capturing finished in 1 secs, took 0.06 GiB
+INFO 11-21 22:05:46 multiproc_worker_utils.py:133] Terminating local vLLM worker processes
+[1;36m(VllmWorkerProcess pid=1796397)[0;0m INFO 11-21 22:05:46 multiproc_worker_utils.py:240] Worker exiting
+vllm (pretrained=meta-llama/Llama-3.1-70B-Instruct,dtype=auto,max_model_len=16384,max_gen_toks=4096,tensor_parallel_size=2,enable_chunked_prefill=True,enable_prefix_caching=False,gpu_memory_utilization=0.8,max_num_seqs=2), gen_kwargs: (None), limit: None, num_fewshot: 0, batch_size: auto
+|                 Tasks                 |Version|Filter|n-shot|  Metric   |   |Value |   |Stderr|
+|---------------------------------------|------:|------|-----:|-----------|---|-----:|---|-----:|
+|mmlu (generative)                      |      2|none  |      |exact_match|↑  |0.0391|±  |0.0016|
+|  - formal_logic                       |      2|none  |     0|exact_match|↑  |0.0000|±  |0.0000|
+|  - high_school_european_history       |      2|none  |     0|exact_match|↑  |0.0364|±  |0.0146|
+|  - high_school_us_history             |      2|none  |     0|exact_match|↑  |0.0588|±  |0.0165|
+|  - high_school_world_history          |      2|none  |     0|exact_match|↑  |0.0675|±  |0.0163|
+|  - international_law                  |      2|none  |     0|exact_match|↑  |0.0248|±  |0.0142|
+|  - jurisprudence                      |      2|none  |     0|exact_match|↑  |0.0463|±  |0.0203|
+|  - logical_fallacies                  |      2|none  |     0|exact_match|↑  |0.0429|±  |0.0159|
+|  - moral_disputes                     |      2|none  |     0|exact_match|↑  |0.1012|±  |0.0162|
+|  - moral_scenarios                    |      2|none  |     0|exact_match|↑  |0.0682|±  |0.0084|
+|  - philosophy                         |      2|none  |     0|exact_match|↑  |0.0740|±  |0.0149|
+|  - prehistory                         |      2|none  |     0|exact_match|↑  |0.0864|±  |0.0156|
+|  - professional_law                   |      2|none  |     0|exact_match|↑  |0.0189|±  |0.0035|
+|  - world_religions                    |      2|none  |     0|exact_match|↑  |0.0351|±  |0.0141|
+|  - business_ethics                    |      2|none  |     0|exact_match|↑  |0.0000|±  |0.0000|
+|  - clinical_knowledge                 |      2|none  |     0|exact_match|↑  |0.0453|±  |0.0128|
+|  - college_medicine                   |      2|none  |     0|exact_match|↑  |0.0289|±  |0.0128|
+|  - global_facts                       |      2|none  |     0|exact_match|↑  |0.2100|±  |0.0409|
+|  - human_aging                        |      2|none  |     0|exact_match|↑  |0.0359|±  |0.0125|
+|  - management                         |      2|none  |     0|exact_match|↑  |0.0485|±  |0.0213|
+|  - marketing                          |      2|none  |     0|exact_match|↑  |0.0128|±  |0.0074|
+|  - medical_genetics                   |      2|none  |     0|exact_match|↑  |0.0500|±  |0.0219|
+|  - miscellaneous                      |      2|none  |     0|exact_match|↑  |0.0613|±  |0.0086|
+|  - nutrition                          |      2|none  |     0|exact_match|↑  |0.0392|±  |0.0111|
+|  - professional_accounting            |      2|none  |     0|exact_match|↑  |0.0177|±  |0.0079|
+|  - professional_medicine              |      2|none  |     0|exact_match|↑  |0.0331|±  |0.0109|
+|  - virology                           |      2|none  |     0|exact_match|↑  |0.0181|±  |0.0104|
+|  - econometrics                       |      2|none  |     0|exact_match|↑  |0.0000|±  |0.0000|
+|  - high_school_geography              |      2|none  |     0|exact_match|↑  |0.0606|±  |0.0170|
+|  - high_school_government_and_politics|      2|none  |     0|exact_match|↑  |0.0363|±  |0.0135|
+|  - high_school_macroeconomics         |      2|none  |     0|exact_match|↑  |0.0179|±  |0.0067|
+|  - high_school_microeconomics         |      2|none  |     0|exact_match|↑  |0.0168|±  |0.0084|
+|  - high_school_psychology             |      2|none  |     0|exact_match|↑  |0.0404|±  |0.0084|
+|  - human_sexuality                    |      2|none  |     0|exact_match|↑  |0.0763|±  |0.0233|
+|  - professional_psychology            |      2|none  |     0|exact_match|↑  |0.0359|±  |0.0075|
+|  - public_relations                   |      2|none  |     0|exact_match|↑  |0.0364|±  |0.0179|
+|  - security_studies                   |      2|none  |     0|exact_match|↑  |0.0653|±  |0.0158|
+|  - sociology                          |      2|none  |     0|exact_match|↑  |0.0398|±  |0.0138|
+|  - us_foreign_policy                  |      2|none  |     0|exact_match|↑  |0.0300|±  |0.0171|
+|  - abstract_algebra                   |      2|none  |     0|exact_match|↑  |0.0300|±  |0.0171|
+|  - anatomy                            |      2|none  |     0|exact_match|↑  |0.0222|±  |0.0127|
+|  - astronomy                          |      2|none  |     0|exact_match|↑  |0.0329|±  |0.0145|
+|  - college_biology                    |      2|none  |     0|exact_match|↑  |0.0347|±  |0.0153|
+|  - college_chemistry                  |      2|none  |     0|exact_match|↑  |0.0100|±  |0.0100|
+|  - college_computer_science           |      2|none  |     0|exact_match|↑  |0.0100|±  |0.0100|
+|  - college_mathematics                |      2|none  |     0|exact_match|↑  |0.0100|±  |0.0100|
+|  - college_physics                    |      2|none  |     0|exact_match|↑  |0.0392|±  |0.0193|
+|  - computer_security                  |      2|none  |     0|exact_match|↑  |0.0300|±  |0.0171|
+|  - conceptual_physics                 |      2|none  |     0|exact_match|↑  |0.0298|±  |0.0111|
+|  - electrical_engineering             |      2|none  |     0|exact_match|↑  |0.0414|±  |0.0166|
+|  - elementary_mathematics             |      2|none  |     0|exact_match|↑  |0.0132|±  |0.0059|
+|  - high_school_biology                |      2|none  |     0|exact_match|↑  |0.0323|±  |0.0101|
+|  - high_school_chemistry              |      2|none  |     0|exact_match|↑  |0.0296|±  |0.0119|
+|  - high_school_computer_science       |      2|none  |     0|exact_match|↑  |0.0100|±  |0.0100|
+|  - high_school_mathematics            |      2|none  |     0|exact_match|↑  |0.0000|±  |0.0000|
+|  - high_school_physics                |      2|none  |     0|exact_match|↑  |0.0066|±  |0.0066|
+|  - high_school_statistics             |      2|none  |     0|exact_match|↑  |0.0185|±  |0.0092|
+|  - machine_learning                   |      2|none  |     0|exact_match|↑  |0.0089|±  |0.0089|
+
+|     Groups      |Version|Filter|n-shot|  Metric   |   |Value |   |Stderr|
+|-----------------|------:|------|------|-----------|---|-----:|---|-----:|
+|mmlu (generative)|      2|none  |      |exact_match|↑  |0.0391|±  |0.0016|
+
